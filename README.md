@@ -13,5 +13,5 @@
 
 
 
-### `npm build` fails to minify
+### `npm build`
 
