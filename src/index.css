@@ -10,7 +10,36 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
 }
 
-
-div{
+div,
+footer {
   min-height: 100px;
+}
+
+.bg-neu {
+  box-shadow: 15px 15px 25px 5px rgb(65, 2, 33);
+}
+
+.m-img {
+  margin: auto;
+  margin-top: -60px !important ;
+}
+
+.bg-darkpurple {
+  background-color: rgba(34, 0, 34, 0.863);
+}
+
+.hmin-500{
+  min-height: 500px;
+}
+.hmin-600{
+  min-height: 600px;
+
+}
+
+span{
+  width: fit-content;
+}
+
+a{
+  font-size: 1.5rem;
 }
