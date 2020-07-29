@@ -28,18 +28,40 @@ footer {
   background-color: rgba(34, 0, 34, 0.863);
 }
 
-.hmin-500{
-  min-height: 500px;
+.text-purple {
+  color: rgba(34, 0, 34, 0.863) !important;
 }
-.hmin-600{
+
+.hmin {
   min-height: 600px;
-
 }
 
-span{
+span {
   width: fit-content;
 }
 
-a{
+.font-md {
   font-size: 1.5rem;
+}
+
+.font-lg {
+  font-size: 2.5rem;
+}
+
+.pd-10{
+  padding: 10px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.txt-white{
+  color: white !important;
+}
+
+.hvr:hover{
+  background-color: #343a40!important;
+}
+
+.bd-custom{
+  border-left: 2px solid rgba(34, 0, 34, 0.863);;
+  border-right: 2px solid rgba(34, 0, 34, 0.863);;
 }
