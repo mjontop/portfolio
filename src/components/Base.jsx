@@ -1,6 +1,8 @@
 import React from 'react'
+import { Link, withRouter, useLocation } from 'react-router-dom'
 
 const Base = ({ children }) => {
+  const path = useLocation().pathname
   return (
     <div className="container mt-5 bg-neu">
       <div className="row">
@@ -31,33 +33,29 @@ const Base = ({ children }) => {
           <div className="bg-dark hmin">
             <div className="bg-darkpurple">
               <nav className="font-lg float-right mr-5 d-flex">
-                <div className="pd-10 hvr">
-                  <a href="https://facebook.com/mjontop0602" className="text-white" target="blank">
+                <div className={getActiveClass(path, '/')}>
+                  <Link to="/">
                     <i className="fa fa-home "></i>
-                  </a>
+                  </Link>
                 </div>
-                <div className="pd-10 bg-dark bd-custom">
-                  <a href="https://github.com/mjontop" className="text-purple" target="blank">
+                <div className={getActiveClass(path, '/portfolio')}>
+                  <Link to="/portfolio">
                     <i className="fa fa-user"></i>
-                  </a>
+                  </Link>
                 </div>
-                <div className="pd-10 hvr">
-                  <a href="https://instagram.com/mjontop_" className="text-white" target="blank">
+                <div className={getActiveClass(path, '/projects')}>
+                  <Link to="/projects">
                     <i className="fa fa-briefcase"></i>
-                  </a>
+                  </Link>
                 </div>
-                <div className="pd-10 hvr">
-                  <a href="https://www.linkedin.com/in/mjontop/" className="text-white" target="blank">
+                <div className={getActiveClass(path, '/contact')}>
+                  <Link to="/contact">
                     <i className="fa fa-envelope"></i>
-                  </a>
+                  </Link>
                 </div>
               </nav>
             </div>
-            There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in
-            some form, by injected humour, or randomised words which don't look even slightly believable. If you are
-            going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the
-            middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as
-            necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin
+            {children}
           </div>
         </div>
         <footer className="bg-darkpurple">
@@ -69,4 +67,9 @@ const Base = ({ children }) => {
   )
 }
 
-export default Base
+export default withRouter(Base)
+
+const getActiveClass = (current, target) => {
+  if (current !== target) return 'pd-10 hvr text-white'
+  return 'pd-10 hvr text-white active-link'
+}
