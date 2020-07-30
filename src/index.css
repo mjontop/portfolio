@@ -65,14 +65,32 @@ span {
   color: rgba(34, 0, 34, 0.863) !important;
 }
 
-.active-link > a{
+.active-link > a {
   background-color: #343a40 !important;
   color: rgba(34, 0, 34, 0.863) !important;
 }
 
-.text-white > a{
+.text-white > a {
   color: #ffffff;
 }
-.text-white:hover > a{
+.text-white:hover > a {
   color: rgba(34, 0, 34, 0.863);
+}
+
+.mr3rem {
+  margin-right: 3rem !important;
+}
+
+@media only screen and (max-width: 768px) {
+  .hmin {
+    min-height: fit-content;
+  }
+  .mr3rem {
+    margin-right: 2%;
+    margin-left: 2%;
+    float: none !important;
+  }
+  .pd-on-sm {
+    padding-bottom: 50px;
+  }
 }

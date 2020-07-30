@@ -7,11 +7,13 @@ const Base = ({ children }) => {
     <div className="container mt-5 bg-neu">
       <div className="row">
         <div className="col-12 col-md-4 text-justify border-right px-0 ">
-          <div className="bg-dark hmin">
+          <div className="bg-dark hmin pd-on-sm">
             <div className="bg-darkpurple "></div>
             <img src="https://place-hold.it/200x200" className="d-block img-fluid m-img mb-4" alt="" />
             <div>
-              <span className="bg-darkpurple mx-3 text-light p-2 d-block mb-2"> I socilize on</span>
+              <span className="bg-darkpurple mx-3 text-muted p-2 d-block mb-2 rounded blockquote">
+                I <b>socilize</b> on
+              </span>
               <span className="mx-3 p-2 font-md">
                 <a href="https://facebook.com/mjontop0602" className="text-white " target="blank">
                   <i className="fa fa-facebook-official"></i>
@@ -32,7 +34,7 @@ const Base = ({ children }) => {
         <div className="col-12 col-md-8 text-justify px-0">
           <div className="bg-dark hmin">
             <div className="bg-darkpurple">
-              <nav className="font-lg float-right mr-5 d-flex">
+              <nav className="font-lg float-right mr3rem d-flex">
                 <div className={getActiveClass(path, '/')}>
                   <Link to="/">
                     <i className="fa fa-home "></i>
@@ -58,9 +60,8 @@ const Base = ({ children }) => {
             {children}
           </div>
         </div>
-        <footer className="bg-darkpurple">
-          There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in
-          some form, by injected humour, or randomised words which don't look even slightly believable. If you are
+        <footer className="bg-darkpurple col-12">
+          <div className="float-right text-muted pt-4 pr-4 text-sm">Copyright © 2020 Manikant Jha</div>
         </footer>
       </div>
     </div>
