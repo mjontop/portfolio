@@ -40,8 +40,8 @@ const Base = ({ children }) => {
                     <i className="fa fa-home "></i>
                   </Link>
                 </div>
-                <div className={getActiveClass(path, '/portfolio')}>
-                  <Link to="/portfolio">
+                <div className={getActiveClass(path, '/profile')}>
+                  <Link to="/profile">
                     <i className="fa fa-user"></i>
                   </Link>
                 </div>
