@@ -18,7 +18,7 @@ const Home = () => {
         </div>
         <div className="col-md-6 col-12 pt-4">
           <span className=" text-muted ml-4 blockquote d-block bg-black mt-2 px-4 rounded">Some Links</span>
-          <span className="text-muted ml-4 blockquote d-block bg-black mt-2 pl-3  pr-4 rounded">
+          <span className="text-muted ml-4 blockquote d-block bg-black mt-2 pl-3  pr-4 rounded-`pill">
             <i class="fa fa-file-pdf-o" aria-hidden="true"></i>
             <pre className="d-inline  text-white"> Resume </pre>
             <sub>[.pdf]</sub>

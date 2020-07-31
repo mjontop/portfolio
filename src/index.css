@@ -45,6 +45,10 @@ sub{
   font-size: 0.8rem;
 }
 
+.font-xsm {
+  font-size: 0.9rem;
+}
+
 .font-sm {
   font-size: 1.1rem;
 }
@@ -111,4 +115,22 @@ sub{
   .pd-on-sm {
     padding-bottom: 50px;
   }
+}
+
+.no-focus:focus{
+  outline: none;
+  background-color: #99AAAB;
+}
+.no-focus{
+  box-shadow: none;
+  background-color: #7B8788;
+  width: 100%;
+}
+
+.btn-bg{
+  background-color: #5b067c;
+}
+.btn-bg:hover{
+  background-color: rgba(34, 0, 34, 0.863);
+  color: #e1e1e1;
 }

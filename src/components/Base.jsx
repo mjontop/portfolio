@@ -6,7 +6,7 @@ const Base = ({ children }) => {
   return (
     <div className="container mt-5 bg-neu">
       <div className="row">
-        <div className="col-12 col-md-4 text-justify border-right px-0 ">
+        <div className="col-12 col-md-4 text-justify border-right px-0 bg-dark">
           <div className="bg-dark hmin pd-on-sm">
             <div className="bg-darkpurple "></div>
             <img src="https://place-hold.it/200x200" className="d-block img-fluid m-img mb-4" alt="" />
@@ -31,7 +31,7 @@ const Base = ({ children }) => {
             </div>
           </div>
         </div>
-        <div className="col-12 col-md-8 text-justify px-0">
+        <div className="col-12 col-md-8 text-justify px-0 bg-dark">
           <div className="bg-dark hmin">
             <div className="bg-darkpurple">
               <nav className="font-lg float-right mr3rem d-flex">
