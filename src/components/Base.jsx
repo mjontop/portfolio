@@ -6,10 +6,15 @@ const Base = ({ children }) => {
   return (
     <div className="container mt-5 bg-neu">
       <div className="row">
-        <div className="col-12 col-md-4 text-justify border-right px-0 bg-dark">
-          <div className="bg-dark hmin pd-on-sm">
+        <div className="col-12 col-md-4 text-justify bd-md-right px-0 bg-dark">
+          <div className="bg-dark hmin pd-on-sm bd-md-right-top">
             <div className="bg-darkpurple "></div>
-            <img src="https://place-hold.it/200x200" className="d-block img-fluid m-img mb-4" alt="" />
+            <img
+              src="https://avatars0.githubusercontent.com/u/41504340?s=460&u=4f8a7d623c10ce757f5b5b2563c54c8cfe6622be&v=4"
+              className="d-block img-fluid m-img mb-4"
+              alt=""
+              width="200"
+            />
             <div>
               <span className="bg-darkpurple mx-3 text-muted p-2 d-block mb-2 rounded blockquote">
                 I <b>socilize</b> on
