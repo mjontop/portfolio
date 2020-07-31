@@ -40,7 +40,7 @@ span {
   background-color: #000000;
 }
 
-sub{
+sub {
   margin-left: 10px;
   font-size: 0.8rem;
 }
@@ -92,7 +92,7 @@ sub{
 }
 
 .text-hight {
-  color: #8519b1
+  color: #8519b1;
 }
 
 .text-white:hover > a {
@@ -117,20 +117,25 @@ sub{
   }
 }
 
-.no-focus:focus{
+.no-focus:focus {
   outline: none;
-  background-color: #99AAAB;
+  background-color: #99aaab;
 }
-.no-focus{
+.no-focus {
   box-shadow: none;
-  background-color: #7B8788;
+  background-color: #7b8788;
   width: 100%;
 }
 
-.btn-bg{
+.btn-bg {
   background-color: #5b067c;
+  color: #778899;
 }
-.btn-bg:hover{
+.btn-bg:hover {
   background-color: rgba(34, 0, 34, 0.863);
   color: #e1e1e1;
+}
+
+.mail {
+  font-size: 0.8rem;
 }
