@@ -20,7 +20,37 @@ const Home = () => {
           </span>
         </div>
         <div className="col-md-6 col-12 pt-4">
-          <span className=" text-muted ml-4 blockquote d-block bg-black mt-2 px-4 rounded">Some Links</span>
+          <span className=" text-muted ml-4 blockquote d-block bg-black mt-2 px-4 rounded">
+            <b>Certifications</b>
+          </span>
+          <span className="text-muted ml-4 blockquote d-block bg-black mt-2 pl-3  pr-4 rounded-`pill">
+            <a href="https://www.coursera.org/account/accomplishments/certificate/JR82J9G8WESQ">
+              <span className="d-inline  text-muted font-xsm">&#9658; Data Structures, Coursera</span>
+            </a>
+          </span>
+          <span className="text-muted ml-4 blockquote d-block bg-black mt-2 pl-3  pr-4 rounded-`pill">
+            <a href="https://www.freecodecamp.org/certification/mjontop/javascript-algorithms-and-data-structures">
+              <span className="d-inline  text-muted font-xsm">
+                &#9658; JavaScript Algorithms and <br /> Data Structures, FreeCodeCamp
+              </span>
+            </a>
+          </span>
+          <span className="text-muted ml-4 blockquote d-block bg-black mt-2 pl-3  pr-4 rounded-`pill">
+            <a href="https://www.hackerrank.com/certificates/3d7e5589b091">
+              <span className="d-inline  text-muted font-xsm">&#9658; Python, HackerRank</span>
+            </a>
+          </span>
+          <span className="text-muted ml-4 blockquote d-block bg-black mt-2 pl-3  pr-4 rounded-`pill">
+            <a href="https://www.coursera.org/account/accomplishments/certificate/JR82J9G8WESQ">
+              <span className="d-inline  text-muted font-xsm">
+                &#9658; Responsive Web Design,
+                <br /> FreeCodeCamp
+              </span>
+            </a>
+          </span>
+          <span className=" text-muted ml-4 blockq  uote d-block bg-black mt-2 px-4 rounded">
+            <b>Some other Links</b>
+          </span>
           <span className="text-muted ml-4 blockquote d-block bg-black mt-2 pl-3  pr-4 rounded-`pill">
             <i class="fa fa-file-pdf-o" aria-hidden="true"></i>
             <pre className="d-inline  text-white"> Resume </pre>
