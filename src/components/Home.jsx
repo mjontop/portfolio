@@ -15,6 +15,9 @@ const Home = () => {
           <span className=" text-muted ml-4 blockquote d-block bg-black mt-2 px-2 rounded font-sm">
             and Build websites in <b className="text-hight">Node.js</b>
           </span>
+          <span className=" text-muted ml-4 blockquote d-block bg-black mt-2 px-2 rounded font-sm">
+            and teach people @ <b className="text-hight">WAC (What After College)</b>
+          </span>
         </div>
         <div className="col-md-6 col-12 pt-4">
           <span className=" text-muted ml-4 blockquote d-block bg-black mt-2 px-4 rounded">Some Links</span>
