@@ -3,7 +3,7 @@ body {
     'Droid Sans', 'Helvetica Neue', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: linear-gradient(90deg, #e61eb6, #20007e);
+  background: linear-gradient(90deg, #c9029ac9, #20007e);
   padding-bottom: 50px;
 }
 
