@@ -22,7 +22,7 @@ const Home = () => {
           </span>
           <span className=" text-muted ml-4 blockquote d-block bg-black mt-4 px-2 rounded">
             &#9658;
-            <a href="https://github.com/mjontop/tic-tac-toe" className=" text-muted">
+            <a href="https://github.com/mjontop/tic-tac-toe" className="text-muted">
               React Tic Tac Toe Game            </a>
           </span>
         </div>

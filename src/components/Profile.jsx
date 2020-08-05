@@ -4,7 +4,7 @@ const Home = () => {
   return (
     <Base>
       <div className="row">
-        <div className="col-md-6 col-12 pt-3">
+        <div className="col-md-4 col-12 pt-3">
           <h3 className="pl-2 text-light">My Skills</h3>
           <b className="pl-2 text-muted"> Fornt-end: </b>
           <ul>
@@ -28,9 +28,9 @@ const Home = () => {
             <li className="text-muted">Git</li>
           </ul>
         </div>
-        <div className="col-md-6 col-12 pt-4">
+        <div className="col-md-6 offset-lg-2 col-12 pt-4">
           <h3 className="pl-2 text-light">Experience</h3>
-          <span className="px-2 text-muted bg-black d-block ml-3 font-sm rounded">
+          <span className="px-2 mx-1 text-muted bg-black d-block ml-3 font-sm rounded">
             <b className="text-hight"> Learn Now</b> <br />
             <span className="font-xsm">May 2020 - present</span>
             <p className="font-xsm pb-1">
@@ -40,7 +40,7 @@ const Home = () => {
               </a>
             </p>
           </span>
-          <span className="px-2 text-muted bg-black d-block ml-3 font-sm rounded">
+          <span className="px-2 mx-1 text-muted bg-black d-block ml-3 font-sm rounded">
             <b className="text-hight"> Pen To Print Publishing</b> <br />
             <span className="font-xsm">Jan 2020 - present</span>
             <p className="font-xsm pb-1">
@@ -50,9 +50,9 @@ const Home = () => {
               </a>
             </p>
           </span>
-          <span className="px-2 text-muted bg-black d-block ml-3 font-sm rounded">
+          <span className="px-2 mx-1 text-muted bg-black d-block ml-3 font-sm rounded">
             <b className="text-hight"> What After College (WAC)</b> <br />
-            <span className="font-xsm">May 2020 - June 2020</span>
+            <span className="font-xsm">June 2020 - present</span>
             <p className="font-xsm pb-1">
               &#9658; Mentor <br /> &#9658; Website:
               <a href="https://whataftercollege.com/" target="blanck">
