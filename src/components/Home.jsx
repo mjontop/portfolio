@@ -24,12 +24,17 @@ const Home = () => {
             <b>Certifications</b>
           </span>
           <span className="text-muted mx-2 blockquote d-block bg-black mt-2 pl-3  pr-4 rounded">
-            <a href="https://www.coursera.org/account/accomplishments/certificate/JR82J9G8WESQ" className=" text-muted">
+            <a
+              target="blanck"
+              href="https://www.coursera.org/account/accomplishments/certificate/JR82J9G8WESQ"
+              className=" text-muted"
+            >
               <span className="d-inline  text-muted font-xsm">&#9658; Data Structures, Coursera</span>
             </a>
           </span>
           <span className="text-muted mx-2 blockquote d-block bg-black mt-2 pl-3  pr-4 rounded">
             <a
+              target="blanck"
               href="https://www.freecodecamp.org/certification/mjontop/javascript-algorithms-and-data-structures"
               className=" text-muted"
             >
@@ -39,12 +44,16 @@ const Home = () => {
             </a>
           </span>
           <span className="text-muted mx-2 blockquote d-block bg-black mt-2 pl-3  pr-4 rounded">
-            <a href="https://www.hackerrank.com/certificates/3d7e5589b091" className=" text-muted">
+            <a target="blanck" href="https://www.hackerrank.com/certificates/3d7e5589b091" className=" text-muted">
               <span className="d-inline  text-muted font-xsm">&#9658; Python, HackerRank</span>
             </a>
           </span>
           <span className="text-muted mx-2 blockquote d-block bg-black mt-2 pl-3  pr-4 rounded">
-            <a href="https://www.coursera.org/account/accomplishments/certificate/JR82J9G8WESQ" className=" text-muted">
+            <a
+              target="blanck"
+              href="https://www.freecodecamp.org/certification/mjontop/responsive-web-design"
+              className=" text-muted"
+            >
               <span className="d-inline  text-muted font-xsm">
                 &#9658; Responsive Web Design,
                 <br /> FreeCodeCamp
