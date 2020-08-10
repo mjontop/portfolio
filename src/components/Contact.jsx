@@ -13,7 +13,24 @@ const Home = () => {
   const handleChange = (name) => (event) => {
     setValues({ ...values, [name]: event.target.value })
   }
-
+  const onSubmit = (event) => {
+    event.preventDefault()
+    setValues({ ...values })
+    sendMessage({ name, email, content })
+      .then((data) => {
+        // if (data.error) {
+        //   setValues({ ...values })
+        // } else {
+        setValues({
+          ...values,
+          name: '',
+          email: '',
+          content: ''
+        })
+        // }
+      })
+      .catch((err) => console.log('Error: ', err.message))
+  }
   return (
     <Base>
       <div className="pt-3 row">
@@ -26,6 +43,7 @@ const Home = () => {
             <input
               className="d-block rounded text-dark no-focus"
               onChange={handleChange('name')}
+              value = {name}
               required
               type="text"
               id="name"
@@ -36,6 +54,7 @@ const Home = () => {
             <input
               className="d-block rounded text-dark no-focus"
               onChange={handleChange('email')}
+              value = {email}
               required
               type="email"
               id="email"
@@ -48,11 +67,11 @@ const Home = () => {
               onChange={handleChange('content')}
               required
               type="text"
-              id="email"
+              value = {content}
               rows="4"
               placeholder="Your Message ..."
             ></textarea>
-            <input className="btn btn-bg px-2 mt-1 btn-block " type="submit" value="Send" />
+            <input onClick={onSubmit} className="btn btn-bg px-2 mt-1 btn-block " type="submit" value="Send" />
           </form>
         </div>
 
@@ -78,4 +97,22 @@ const Home = () => {
   )
 }
 
+const API = 'http://localhost:1337/api/message/'
+
+const sendMessage = async (message) => {
+  console.log(message.name, message.email, message.content)
+  try {
+    const response = await fetch(`${API}`, {
+      method: 'POST',
+      headers: {
+        Accept: 'application/json',
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(message)
+    })
+    return response.json()
+  } catch (err) {
+    return console.log(err)
+  }
+}
 export default Home
