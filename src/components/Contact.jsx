@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import Base from './Base'
 
 const Home = () => {
+  const [sent, setSent] = useState(false)
   const [values, setValues] = useState({
     name: '',
     email: '',
@@ -18,16 +19,15 @@ const Home = () => {
     setValues({ ...values })
     sendMessage({ name, email, content })
       .then((data) => {
-        // if (data.error) {
-        //   setValues({ ...values })
-        // } else {
-        setValues({
-          ...values,
-          name: '',
-          email: '',
-          content: ''
-        })
-        // }
+        if (data) {
+          setSent(true)
+          setValues({
+            ...values,
+            name: '',
+            email: '',
+            content: ''
+          })
+        }
       })
       .catch((err) => console.log('Error: ', err.message))
   }
@@ -35,6 +35,7 @@ const Home = () => {
     <Base>
       <div className="pt-3 row">
         <div className="col-12 col-md-6">
+          <h6 className={messageSent(sent)}>Will get back to you Super Soon</h6>
           <h6 className="pl-4 text-muted bg-black mr-3 rounded py-2 ml-2">Get in Touch</h6> <br />
           <form className="pl-2 mr-2 mb-4">
             <label className="d-block text-light" htmlFor="name">
@@ -43,7 +44,7 @@ const Home = () => {
             <input
               className="d-block rounded text-dark no-focus"
               onChange={handleChange('name')}
-              value = {name}
+              value={name}
               required
               type="text"
               id="name"
@@ -54,7 +55,7 @@ const Home = () => {
             <input
               className="d-block rounded text-dark no-focus"
               onChange={handleChange('email')}
-              value = {email}
+              value={email}
               required
               type="email"
               id="email"
@@ -67,14 +68,13 @@ const Home = () => {
               onChange={handleChange('content')}
               required
               type="text"
-              value = {content}
+              value={content}
               rows="4"
               placeholder="Your Message ..."
             ></textarea>
             <input onClick={onSubmit} className="btn btn-bg px-2 mt-1 btn-block " type="submit" value="Send" />
           </form>
         </div>
-
         <div className="col-12 col-md-6">
           <h6 className="pl-4 text-muted bg-black mr-3 rounded py-2 ml-2">Contact Info</h6> <br />
           <span className="text-muted font-sm d-block ml-2">
@@ -114,5 +114,12 @@ const sendMessage = async (message) => {
   } catch (err) {
     return console.log(err)
   }
+}
+
+const messageSent = (sent) => {
+  if (sent) {
+    return 'pl-3 bg-success mr-3 rounded py-2 ml-2'
+  }
+  return 'd-none'
 }
 export default Home
