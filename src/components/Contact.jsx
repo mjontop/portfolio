@@ -6,10 +6,12 @@ const Home = () => {
   const [values, setValues] = useState({
     name: '',
     email: '',
-    content: ''
+    content: '',
+    result: '',
+    success: false
   })
 
-  const { name, email, content } = values
+  const { name, email, content, result, success } = values
 
   const handleChange = (name) => (event) => {
     setValues({ ...values, [name]: event.target.value })
@@ -17,15 +19,30 @@ const Home = () => {
   const onSubmit = (event) => {
     event.preventDefault()
     setValues({ ...values })
-    sendMessage({ name, email, content })
+    if (name === '') {
+      setValues({ ...values, result: 'Name cannot be Empty', success: false })
+      return
+    }
+    if (email === '') {
+      setValues({ ...values, result: 'Email cannot be Empty', success: false })
+      return
+    }
+    if (content === '') {
+      setValues({ ...values, result: 'Empty message?  ', success: false })
+      return
+    }
+    sendMessage({ name, email, MessageBox: content })
       .then((data) => {
         if (data) {
+          console.log('ret', data)
           setSent(true)
           setValues({
             ...values,
             name: '',
             email: '',
-            content: ''
+            content: '',
+            result: data.result,
+            success: data.success
           })
         }
       })
@@ -35,7 +52,7 @@ const Home = () => {
     <Base>
       <div className="pt-3 row">
         <div className="col-12 col-md-6">
-          <h6 className={messageSent(sent)}>Will get back to you Super Soon</h6>
+          <h6 className={messageSent(sent, success)}>{result} </h6>
           <h6 className="pl-4 text-muted bg-black mr-3 rounded py-2 ml-2">Get in Touch</h6> <br />
           <form className="pl-2 mr-2 mb-4">
             <label className="d-block text-light" htmlFor="name">
@@ -92,7 +109,6 @@ const Home = () => {
           </span>
         </div>
       </div>
-      {/* <p className="text-light text-center">{JSON.stringify(values)}</p> */}
     </Base>
   )
 }
@@ -100,7 +116,6 @@ const Home = () => {
 const API = 'http://localhost:1337/api/message/'
 
 const sendMessage = async (message) => {
-  console.log(message.name, message.email, message.content)
   try {
     const response = await fetch(`${API}`, {
       method: 'POST',
@@ -116,9 +131,11 @@ const sendMessage = async (message) => {
   }
 }
 
-const messageSent = (sent) => {
-  if (sent) {
+const messageSent = (sent, success) => {
+  if (sent && success) {
     return 'pl-3 bg-success mr-3 rounded py-2 ml-2'
+  } else if (sent && !success) {
+    return 'px-1 bg-danger mr-3 text-capitalize rounded py-2 ml-2 text-light'
   }
   return 'd-none'
 }
