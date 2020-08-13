@@ -8,10 +8,11 @@ const Home = () => {
     email: '',
     content: '',
     result: '',
-    success: false
+    success: false,
+    error: false
   })
 
-  const { name, email, content, result, success } = values
+  const { name, email, content, result, success, error } = values
 
   const handleChange = (name) => (event) => {
     setValues({ ...values, [name]: event.target.value })
@@ -19,18 +20,7 @@ const Home = () => {
   const onSubmit = (event) => {
     event.preventDefault()
     setValues({ ...values })
-    if (name === '') {
-      setValues({ ...values, result: 'Name cannot be Empty', success: false })
-      return
-    }
-    if (email === '') {
-      setValues({ ...values, result: 'Email cannot be Empty', success: false })
-      return
-    }
-    if (content === '') {
-      setValues({ ...values, result: 'Empty message?  ', success: false })
-      return
-    }
+
     sendMessage({ name, email, MessageBox: content })
       .then((data) => {
         if (data) {
@@ -52,7 +42,7 @@ const Home = () => {
     <Base>
       <div className="pt-3 row">
         <div className="col-12 col-md-6">
-          <h6 className={messageSent(sent, success)}>{result} </h6>
+          <h6 className={messageSent(sent, success, error)}>{result} </h6>
           <h6 className="pl-4 text-muted bg-black mr-3 rounded py-2 ml-2">Get in Touch</h6> <br />
           <form className="pl-2 mr-2 mb-4">
             <label className="d-block text-light" htmlFor="name">
@@ -62,7 +52,6 @@ const Home = () => {
               className="d-block rounded text-dark no-focus"
               onChange={handleChange('name')}
               value={name}
-              required
               type="text"
               id="name"
             />
@@ -73,7 +62,6 @@ const Home = () => {
               className="d-block rounded text-dark no-focus"
               onChange={handleChange('email')}
               value={email}
-              required
               type="email"
               id="email"
             />
@@ -83,7 +71,6 @@ const Home = () => {
             <textarea
               className="d-block rounded text-dark no-focus"
               onChange={handleChange('content')}
-              required
               type="text"
               value={content}
               rows="4"
@@ -113,7 +100,7 @@ const Home = () => {
   )
 }
 
-const API = 'http://localhost:1337/api/message/'
+const API = 'https://portfolio-testmj.herokuapp.com/api/message/'
 
 const sendMessage = async (message) => {
   try {
@@ -131,12 +118,16 @@ const sendMessage = async (message) => {
   }
 }
 
-const messageSent = (sent, success) => {
+const messageSent = (sent, success, error) => {
   if (sent && success) {
+    clearInput()
     return 'pl-3 bg-success mr-3 rounded py-2 ml-2'
-  } else if (sent && !success) {
+  } else if ((sent && !success) || error) {
     return 'px-1 bg-danger mr-3 text-capitalize rounded py-2 ml-2 text-light'
   }
   return 'd-none'
 }
+
+const clearInput = () => {}
+
 export default Home

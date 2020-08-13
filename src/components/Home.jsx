@@ -64,7 +64,7 @@ const Home = () => {
             <b>Some other Links</b>
           </span>
           <span className="text-muted mx-2 blockquote d-block bg-black mt-2 pl-3  pr-4 rounded">
-            <i class="fa fa-file-pdf-o" aria-hidden="true"></i>
+            <i className="fa fa-file-pdf-o" aria-hidden="true"></i>
             <pre className="d-inline  text-white"> Resume </pre>
             <sub>[.pdf]</sub>
           </span>
