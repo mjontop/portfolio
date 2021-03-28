@@ -34,6 +34,13 @@ const Base = ({ children }) => {
                 </a>
               </span>
             </div>
+            <div className="m-0">
+              <iframe
+                className="w-100 border-0"
+                src={`https://github-readme-stats.vercel.app/api?username=mjontop&count_private=true&theme=radical&hide=issues&show_icons=true&include_all_commits=true&hide_rank=true&line_height=20&icon_color=5b067c`}
+                title="Github data"
+              ></iframe>
+            </div>
           </div>
         </div>
         <div className="col-12 col-md-8 text-justify px-0 bg-dark">

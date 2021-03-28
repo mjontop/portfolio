@@ -30,13 +30,26 @@ const Home = () => {
         </div>
         <div className="col-md-6 offset-lg-2 col-12 pt-4">
           <h3 className="pl-2 text-light">Experience</h3>
+          
+          <span className="px-2 mx-1 text-muted bg-black d-block ml-3 font-sm rounded">
+            <b className="text-hight">CelebritySchool.in</b> <br />
+            <span className="font-xsm">Sep 2020 - Jan 2021</span>
+            <p className="font-xsm pb-1">
+              &#9658; Mern Stack Developer <br /> &#9658; Website:
+              <a href="https://celebrityschool.in/" target="blanck">
+                <u className="text-muted px-1">celebrityschool.in</u>
+              </a>
+            </p>
+          </span>
+
+
           <span className="px-2 mx-1 text-muted bg-black d-block ml-3 font-sm rounded">
             <b className="text-hight"> Learn Now</b> <br />
-            <span className="font-xsm">May 2020 - present</span>
+            <span className="font-xsm">May 2020 - Aug 2020</span>
             <p className="font-xsm pb-1">
               &#9658; Full Stack Developer Intern <br /> &#9658; Website:
               <a href="https://learn-online.org/" target="blanck">
-                <u className="text-muted">learn-online.org/</u>
+                <u className="text-muted px-1">learn-online.org/</u>
               </a>
             </p>
           </span>
@@ -46,7 +59,7 @@ const Home = () => {
             <p className="font-xsm pb-1">
               &#9658; Full Stack Developer <br /> &#9658; Website:
               <a href="https://www.pentoprintpublishing.in/" target="blanck">
-                <u className="text-muted">pentoprintpublishing.in/</u>
+                <u className="text-muted px-1">pentoprintpublishing.in/</u>
               </a>
             </p>
           </span>
@@ -56,7 +69,7 @@ const Home = () => {
             <p className="font-xsm pb-1">
               &#9658; Mentor <br /> &#9658; Website:
               <a href="https://whataftercollege.com/" target="blanck">
-                <u className="text-muted">whataftercollege.com/</u>
+                <u className="text-muted px-1">whataftercollege.com/</u>
               </a>
             </p>
           </span>
