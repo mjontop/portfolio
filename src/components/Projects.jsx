@@ -10,10 +10,24 @@ const Home = () => {
           </span>
           <span className=" text-muted ml-4 mr-3 blockquote d-block bg-black mt-4 px-2 rounded">
             &#9658;
+            <a href="https://github.com/mjontop/sparxfintech" className=" text-muted">
+              Sparxhealth Care Project
+            </a> <br/>
+            <small>Show Demographics data of USA and Canada and plot it on graph</small>
+          </span>
+          <span className=" text-muted ml-4 mr-3 blockquote d-block bg-black mt-4 px-2 rounded">
+            &#9658;
+            <a href="https://celebrityschool.in/" className=" text-muted">
+              Celebrity School
+            </a>
+          </span>
+          <span className=" text-muted ml-4 mr-3 blockquote d-block bg-black mt-4 px-2 rounded">
+            &#9658;
             <a href="https://github.com/mjontop/portfolio" className=" text-muted">
               Portfolio Website
             </a>
           </span>
+
           <span className=" text-muted ml-4 mr-3 blockquote d-block bg-black mt-4 px-2 rounded">
             &#9658;
             <a href="https://github.com/mjontop/Book-rental" className=" text-muted">
@@ -23,7 +37,8 @@ const Home = () => {
           <span className=" text-muted ml-4 mr-3 blockquote d-block bg-black mt-4 px-2 rounded">
             &#9658;
             <a href="https://github.com/mjontop/tic-tac-toe" className="text-muted">
-              React Tic Tac Toe Game            </a>
+              React Tic Tac Toe Game{' '}
+            </a>
           </span>
         </div>
       </div>

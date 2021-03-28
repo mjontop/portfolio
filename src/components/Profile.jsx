@@ -23,6 +23,7 @@ const Home = () => {
           <b className="pl-2 text-muted">Proficiency:</b>
           <ul>
             <li className="text-muted">C / C++</li>
+            <li className="text-muted">AWS</li>
             <li className="text-muted">Python3</li>
             <li className="text-muted">Linux</li>
             <li className="text-muted">Git</li>
